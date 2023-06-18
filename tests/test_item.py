@@ -8,6 +8,14 @@ def test_item():
     return Item('Часы с кукушкой', 7000, 100)
 
 
+def test__repr__(test_item):
+    assert repr(test_item) == "Item('Часы с кукушкой', 7000, 100)"
+
+
+def test__str__(test_item):
+    assert str(test_item) == 'Часы с кукушкой'
+
+
 def test_calculate_total_price(test_item):
     assert test_item.calculate_total_price() == 700_000
 
